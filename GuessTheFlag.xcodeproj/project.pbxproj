@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		EEFD34522DC9059100C221FD /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = EEFD34512DC9059100C221FD /* CHANGELOG.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		EE7F7E1E2DC76288004E0104 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		EE7F7E102DC76287004E0104 /* GuessTheFlag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessTheFlag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE7F7E1D2DC76288004E0104 /* GuessTheFlagTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuessTheFlagTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE7F7E272DC76288004E0104 /* GuessTheFlagUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuessTheFlagUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEFD34512DC9059100C221FD /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +80,7 @@
 		EE7F7E072DC76287004E0104 = {
 			isa = PBXGroup;
 			children = (
+				EEFD34512DC9059100C221FD /* CHANGELOG.md */,
 				EE7F7E122DC76287004E0104 /* GuessTheFlag */,
 				EE7F7E202DC76288004E0104 /* GuessTheFlagTests */,
 				EE7F7E2A2DC76288004E0104 /* GuessTheFlagUITests */,
@@ -212,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEFD34522DC9059100C221FD /* CHANGELOG.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

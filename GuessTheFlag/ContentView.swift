@@ -20,14 +20,25 @@ struct ContentView: View {
     @State private var questionCount = 0
     @State private var gameIsOver = false
     @State private var gameOver = ""
+    @State private var userAnswer = 0
+    
+struct FlagImage: View {
+    var imageName: String
+        
+    var body: some View {
+            Image(imageName)
+                .clipShape(.capsule)
+                .shadow(radius: 5)
+    }
+}
     
     var body: some View {
         ZStack {
             RadialGradient(stops: [
                 .init(color: .teal, location: 0.23),
-                .init(color: Color(red:0.77, green: 0.15, blue: 0.26), location: 0.33)
+                .init(color: .orange, location: 0.33)
             ], center: .top, startRadius: 235, endRadius: 700)
-                .ignoresSafeArea()
+            .ignoresSafeArea()
             
             VStack {
                 Spacer()
@@ -50,9 +61,7 @@ struct ContentView: View {
                     Button {
                         flagTapped(number)
                     } label: {
-                        Image(countries[number])
-                            .clipShape(.capsule)
-                            .shadow(radius: 5)
+                        FlagImage(imageName: countries[number])
                     }
                 }
             }
@@ -79,7 +88,7 @@ struct ContentView: View {
             if  scoreTitle == "Correct!" {
             Text("Your score is \(userScore)!")
             } else {
-                Text("The correct answer was \(countries[correctAnswer])!")
+                Text("You chose the flag of \(countries[userAnswer])! The flag of \(countries[correctAnswer]) was the \(positionText(for: correctAnswer)) flag.")
             }
         }
         .alert(gameOver, isPresented: $gameIsOver) {
@@ -99,7 +108,16 @@ struct ContentView: View {
         questionCount += 1
     }
     
+    func positionText(for number: Int) -> String {
+        switch number {
+        case 0: return "1st"
+        case 1: return "2nd"
+        default: return "3rd"
+        }
+    }
+    
     func flagTapped(_ number: Int) {
+        userAnswer = number
         if number == correctAnswer {
             scoreTitle = "Correct!"
         } else {
