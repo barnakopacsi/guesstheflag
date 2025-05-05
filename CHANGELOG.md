@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 - Replaced individual flag `Image` views with a reusable `FlagImage` view component.
 - Cleaned up the codebase to improve readability.
 - "Wrong!" alert now shows what the correct answer was.
+- Changed the background color of UI.
 
 ## [1.0.0] - 2025-05-04
 ### Added

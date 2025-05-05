@@ -19,10 +19,10 @@
 
 ## Screenshots
 
-![Guess the Flag Screenshot #1](ss1.png)  
-![Guess the Flag Screenshot #2](ss2.png)  
-![Guess the Flag Screenshot #3](ss3.png)
-![Guess the Flag Screenshot #3](ss4.png)
+![Guess the Flag Screenshot #1](ss5.png)  
+![Guess the Flag Screenshot #2](ss6.png)  
+![Guess the Flag Screenshot #3](ss7.png)
+![Guess the Flag Screenshot #3](ss8.png)
 
 ---
 
