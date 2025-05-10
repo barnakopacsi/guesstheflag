@@ -21,6 +21,7 @@ struct ContentView: View {
     @State private var gameIsOver = false
     @State private var gameOver = ""
     @State private var userAnswer = 0
+    @State private var selectedFlag: Int? = nil
     
 struct FlagImage: View {
     var imageName: String
@@ -47,6 +48,8 @@ struct FlagImage: View {
                     .font(.largeTitle.bold())
                     .foregroundStyle(.white)
                 
+                Spacer()
+                
             VStack(spacing: 15) {
                 VStack {
                     Text("Tap the flag of")
@@ -63,6 +66,12 @@ struct FlagImage: View {
                     } label: {
                         FlagImage(imageName: countries[number])
                     }
+                    .rotation3DEffect(
+                        .degrees(selectedFlag == number ? 360 : 0),
+                        axis: (x: 0, y: 1, z: 0)
+                    )
+                    .opacity(selectedFlag == nil || selectedFlag == number ? 1 : 0.25)
+                    .scaleEffect(selectedFlag == nil || selectedFlag == number ? 1 : 0.75)
                 }
             }
             .frame(maxWidth: 350)
@@ -117,6 +126,9 @@ struct FlagImage: View {
     }
     
     func flagTapped(_ number: Int) {
+        withAnimation(.bouncy(duration: 0.7)) {
+            selectedFlag = number
+        }
         userAnswer = number
         if number == correctAnswer {
             scoreTitle = "Correct!"
@@ -148,6 +160,7 @@ struct FlagImage: View {
             gameOver = "Game over!"
             gameIsOver = true
         }
+        selectedFlag = nil
     }
 }
 

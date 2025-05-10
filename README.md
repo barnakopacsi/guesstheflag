@@ -13,16 +13,19 @@
 - Tap-to-guess gameplay with immediate feedback
 - Score tracking and final game summary after 8 rounds
 - Beautiful gradient background and playful rounded UI
+- Smooth animations: rotating, fading, and scaling effects
 - Easy reset for replayability
 
 ---
 
 ## Screenshots
 
-![Guess the Flag Screenshot #1](ss5.png)  
-![Guess the Flag Screenshot #2](ss6.png)  
-![Guess the Flag Screenshot #3](ss7.png)
-![Guess the Flag Screenshot #3](ss8.png)
+![Guess the Flag Screenshot #1](ss9.png)  
+![Guess the Flag Screenshot #2](ss10.png)  
+![Guess the Flag Screenshot #3](ss11.png)
+![Guess the Flag Screenshot #4(ss12.png)
+![Guess the Flag Screenshot #5](ss13.png)
+![Guess the Flag Screenshot #6](ss14.png)
 
 ---
 
